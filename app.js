@@ -76,3 +76,43 @@ function daysInMonth(month, leapYear) {
 
   
 }
+
+
+function rockPaperScissors(num) {
+    const randomNo = Math.floor(Math.random() * 3) + 1; 
+    let result = ""
+    switch (num) {
+        case 1:
+            if (randomNo === 2){
+                result = "Computer Wins"
+            } else if (randomNo === 3) {
+                result = "Player Wins"
+            } else if (randomNo === 1) {
+                result = "It's a tie"
+            }
+            break;
+
+            case 2:
+            if (randomNo === 2){
+                result = "It's a tie"
+            } else if (randomNo === 3) {
+                result = "Computer Wins"
+            } else if (randomNo === 1) {
+                result = "Player Wins"
+            }
+            break;
+
+            case 3:
+            if (randomNo === 2){
+                result = "Player Wins"
+            } else if (randomNo === 3) {
+                result = "It's a tie"
+            } else if (randomNo === 1) {
+                result = "Computer Wins"
+            }
+            break;
+            
+            default: throw Error ("incorrect input")
+    } 
+    return result;
+}
