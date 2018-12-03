@@ -17,20 +17,21 @@ function beyond (num) {
 }
 
 function decode(uncoded) {
-    let newArr = []
-    for (let i = 0; i < uncoded.length; i++){
-        if(uncoded[0] === "a"){
-            newArr.push(uncoded[1])
-        } else if (uncoded[0] === "b"){
-            newArr.push(uncoded[2])
-        } else if(uncoded[0] === "c"){
-            newArr.push(uncoded[3])
-        } else if (uncoded[0] === 'd'){
-            newArr.push(uncoded[4])
-        } else {
-            return " "
+    const newArr = [];
+    const splitArr = uncoded.split(" ");
+    for (let y in splitArr){
+            if(splitArr[y][0] === "a"){
+                newArr.push(splitArr[y][1])
+            } else if (splitArr[y][0] === "b"){
+                newArr.push(splitArr[y][2])
+            } else if(splitArr[y][0] === "c"){
+                newArr.push(splitArr[y][3])
+            } else if (splitArr[y][0] === 'd'){
+                newArr.push(splitArr[y][4])
+            } else {
+                newArr.push(" ")
+            }
         }
-    }
-    return newArr[i];
+    return newArr.join("");
 }
 
